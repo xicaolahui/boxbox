@@ -987,6 +987,53 @@ h2.lined-title {
   object-position: center;
 }
 
+.prototype-window {
+  margin-top: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 64, 144, 0.16);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.prototype-window__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #eef2f8;
+  border-bottom: 1px solid rgba(8, 64, 144, 0.12);
+}
+
+.prototype-window__dots {
+  flex-shrink: 0;
+  width: 42px;
+  height: 10px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 5px 5px, #ff5f57 4px, transparent 5px),
+    radial-gradient(circle at 21px 5px, #febc2e 4px, transparent 5px),
+    radial-gradient(circle at 37px 5px, #28c840 4px, transparent 5px);
+}
+
+.prototype-window__bar a {
+  overflow: hidden;
+  color: #084090;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.prototype-window__frame {
+  display: block;
+  width: 100%;
+  height: min(78vh, 760px);
+  border: 0;
+  background: #faf0e8;
+}
+
 .prototype-usage {
   display: block;
   width: 100%;
@@ -2218,30 +2265,45 @@ voice - One-sentence tactical call (&lt;20 characters, player car only)
           alt="System structure of the AI race simulator, with software, hardware, and CSS, JavaScript, HTML implementation"
         />
         <div class="prototype-grid">
-          <a class="prototype-shot" href="dashboard.html">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/dashboard.html">
             <img src="https://iili.io/nBtnyKJ.png" alt="Dashboard cockpit view" />
           </a>
-          <a class="prototype-shot" href="dashboard.html?cam=overview">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/dashboard.html?cam=overview">
             <img src="https://iili.io/nBtonKG.png" alt="Dashboard Circuit1 overview" />
           </a>
-          <a class="prototype-shot" href="dashboard.html?cam=overview">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/dashboard.html?cam=overview">
             <img src="https://iili.io/nBtoTR2.png" alt="Dashboard communication error overlay" />
           </a>
-          <a class="prototype-shot" href="dashboard.html?cam=overview">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/dashboard.html?cam=overview">
             <img src="https://iili.io/nBto7Ve.png" alt="Dashboard driver error overlay" />
           </a>
-          <a class="prototype-shot" href="telemetry.html">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/telemetry.html">
             <img src="https://iili.io/nBtoEHQ.png" alt="Telemetry HUD" />
           </a>
-          <a class="prototype-shot" href="track2.html">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/track2.html">
             <img src="https://iili.io/nBtoMOB.png" alt="Dashboard Circuit2" />
           </a>
-          <a class="prototype-shot" href="dashboard.html?cam=overview">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/dashboard.html?cam=overview">
             <img src="https://iili.io/nBtohWF.png" alt="Dashboard track callout" />
           </a>
-          <a class="prototype-shot" href="telemetry.html">
+          <a class="prototype-shot" href="https://xicaolahui.github.io/boxbox-hud/telemetry.html">
             <img src="https://iili.io/nBtovJR.png" alt="Telemetry mesh, G-force, and drift panels" />
           </a>
+        </div>
+        <div class="prototype-window">
+          <div class="prototype-window__bar">
+            <span class="prototype-window__dots" aria-hidden="true"></span>
+            <a href="https://xicaolahui.github.io/boxbox-hud/" target="_blank" rel="noopener noreferrer">
+              https://xicaolahui.github.io/boxbox-hud/
+            </a>
+          </div>
+          <iframe
+            class="prototype-window__frame"
+            src="https://xicaolahui.github.io/boxbox-hud/"
+            title="BOX BOX live prototype"
+            loading="lazy"
+            allow="fullscreen"
+          ></iframe>
         </div>
         <img
           class="prototype-usage"
