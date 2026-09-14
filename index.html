@@ -988,20 +988,21 @@ h2.lined-title {
 }
 
 .prototype-window {
-  margin-top: 28px;
+  margin-top: 36px;
   overflow: hidden;
-  border: 1px solid rgba(8, 64, 144, 0.16);
+  border: 1px solid rgba(8, 64, 144, 0.2);
   border-radius: 12px;
   background: #fff;
+  box-shadow: 0 16px 40px rgba(8, 64, 144, 0.12);
 }
 
 .prototype-window__bar {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
-  background: #eef2f8;
-  border-bottom: 1px solid rgba(8, 64, 144, 0.12);
+  padding: 12px 16px;
+  background: #084090;
+  color: #fff;
 }
 
 .prototype-window__dots {
@@ -1015,9 +1016,18 @@ h2.lined-title {
     radial-gradient(circle at 37px 5px, #28c840 4px, transparent 5px);
 }
 
+.prototype-window__bar span {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .prototype-window__bar a {
+  margin-left: auto;
   overflow: hidden;
-  color: #084090;
+  color: #fff;
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   line-height: 1.2;
@@ -1029,7 +1039,7 @@ h2.lined-title {
 .prototype-window__frame {
   display: block;
   width: 100%;
-  height: min(78vh, 760px);
+  height: 760px;
   border: 0;
   background: #faf0e8;
 }
@@ -2293,15 +2303,15 @@ voice - One-sentence tactical call (&lt;20 characters, player car only)
         <div class="prototype-window">
           <div class="prototype-window__bar">
             <span class="prototype-window__dots" aria-hidden="true"></span>
+            <span>Live Prototype</span>
             <a href="https://xicaolahui.github.io/boxbox-hud/" target="_blank" rel="noopener noreferrer">
-              https://xicaolahui.github.io/boxbox-hud/
+              Open full page
             </a>
           </div>
           <iframe
             class="prototype-window__frame"
-            src="https://xicaolahui.github.io/boxbox-hud/"
-            title="BOX BOX live prototype"
-            loading="lazy"
+            src="https://xicaolahui.github.io/boxbox-hud/dashboard.html"
+            title="BOX BOX live dashboard prototype"
             allow="fullscreen"
           ></iframe>
         </div>
