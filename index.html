@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -22,6 +22,9 @@
   --gap: clamp(20px, 2.4vw, 32px);
   --frame: 1180px;
   --gutter: 48px;
+  --font: "Source Serif 4", Palatino, "Palatino Linotype", Georgia, serif;
+  --font-ui: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 *,
@@ -40,7 +43,9 @@ html {
 body {
   min-height: 100vh;
   color: var(--ink);
-  font-family: "IBM Plex Sans", "Barlow", sans-serif;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
   background: var(--bg);
 }
 
@@ -84,24 +89,24 @@ body {
 .hero__copy h1 {
   margin: 22px 0 18px;
   color: var(--ink);
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(56px, 7vw, 88px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  font-family: var(--font);
+  font-size: clamp(40px, 5.4vw, 64px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0;
 }
 
 .hero__lead {
-  max-width: 34ch;
+  max-width: 42ch;
   color: var(--ink);
-  font-family: "Barlow", sans-serif;
-  font-size: clamp(22px, 2.4vw, 30px);
-  font-weight: 500;
-  line-height: 1.28;
+  font-family: var(--font);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 400;
+  line-height: 1.45;
 }
 
 .hero__lead em {
-  font-style: normal;
+  font-style: italic;
   color: var(--cyan);
 }
 
@@ -127,7 +132,7 @@ body {
   min-height: 46px;
   padding: 0 18px;
   border-radius: 8px;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -199,9 +204,9 @@ img {
   align-items: center;
   gap: 14px;
   margin-bottom: 64px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--cyan-dim);
@@ -223,32 +228,32 @@ img {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.28em 0.36em;
-  font-family: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(28px, 5vw, 56px);
-  line-height: 0.95;
-  letter-spacing: 0.01em;
+  font-family: var(--font);
+  font-size: clamp(28px, 4.2vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
   scroll-margin-top: 32px;
 }
 
 h1.lined-title,
 h2.lined-title {
-  font-size: clamp(28px, 5vw, 56px);
+  font-size: clamp(28px, 4.2vw, 40px);
 }
 
 .lined-title__num {
   color: #a5b7d5;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .lined-title__text {
   color: #084090;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .inspiration__sub {
   margin-top: 14px;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: clamp(22px, 2.6vw, 32px);
   font-weight: 400;
   font-style: italic;
@@ -367,16 +372,16 @@ h2.lined-title {
 }
 
 .section-head--sub h3 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(32px, 5.2vw, 64px);
-  font-weight: 700;
-  line-height: 0.92;
-  letter-spacing: 0.04em;
+  font-family: var(--font);
+  font-size: clamp(28px, 4.2vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
   color: var(--ink);
 }
 
 .section-head--retro h3 {
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: var(--font);
   font-size: clamp(20px, 2.2vw, 28px);
   font-weight: 600;
   font-style: italic;
@@ -460,7 +465,7 @@ h2.lined-title {
 }
 
 .problem-origin__title {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(22px, 2.6vw, 36px);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -470,7 +475,7 @@ h2.lined-title {
 .problem-origin__sub {
   max-width: 12ch;
   margin-top: 4px;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(10px, 0.95vw, 13px);
   font-weight: 500;
   line-height: 1.25;
@@ -486,7 +491,7 @@ h2.lined-title {
   border-radius: 8px;
   background: var(--map-fill);
   color: var(--map-blue);
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(13px, 1.15vw, 16px);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -549,7 +554,7 @@ h2.lined-title {
 .problem-desc__kicker {
   margin-bottom: 8px;
   color: var(--map-blue);
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -592,7 +597,7 @@ h2.lined-title {
 }
 
 .overview-table thead th {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -603,7 +608,7 @@ h2.lined-title {
 
 .overview-table tbody th {
   width: 12%;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -694,7 +699,7 @@ h2.lined-title {
   overflow-x: auto;
   background: #f0ebe6;
   color: #1c1c1c;
-  font-family: "IBM Plex Mono", "Barlow", ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-size: clamp(13px, 1.15vw, 16px);
   line-height: 1.7;
   white-space: pre;
@@ -756,7 +761,7 @@ h2.lined-title {
 
 .concept-num {
   fill: #1e6beb;
-  font-family: "Barlow", "Helvetica Neue", sans-serif;
+  font-family: var(--font-ui);
   font-size: 34px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -764,7 +769,7 @@ h2.lined-title {
 
 .concept-kicker {
   fill: #1e6beb;
-  font-family: "Barlow", "Helvetica Neue", sans-serif;
+  font-family: var(--font-ui);
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -772,7 +777,7 @@ h2.lined-title {
 
 .concept-note {
   fill: #5b6573;
-  font-family: "Barlow", "Helvetica Neue", sans-serif;
+  font-family: var(--font-ui);
   font-size: 12px;
   font-weight: 400;
 }
@@ -824,16 +829,16 @@ h2.lined-title {
 }
 
 .process-card__head span {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1;
 }
 
 .process-card__head h3 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.04em;
 }
 
@@ -1021,7 +1026,7 @@ h2.lined-title {
 }
 
 .prototype-window__bar span {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1050,7 +1055,7 @@ h2.lined-title {
   border-radius: 8px;
   background: #084090;
   color: #fff;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -1104,24 +1109,24 @@ h2.lined-title {
 .future-card__head span {
   flex-shrink: 0;
   color: #084090;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1;
 }
 
 .future-card__head h3 {
   color: #084090;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: clamp(16px, 1.5vw, 18px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
 
 .future-card p {
   color: #2a4f8c;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: 15px;
   line-height: 1.55;
 }
@@ -1197,7 +1202,7 @@ h2.lined-title {
 
 .node h4 {
   margin-bottom: 6px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1223,7 +1228,7 @@ h2.lined-title {
 
 .node-packets__head {
   margin-bottom: 6px;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: #555;
 }
@@ -1238,7 +1243,7 @@ h2.lined-title {
   display: grid;
   grid-template-columns: 22px 1fr;
   gap: 8px;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   line-height: 1.5;
 }
@@ -1423,7 +1428,7 @@ h2.lined-title {
 }
 
 .flow-label {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: 13px;
   color: #0b2f38;
   text-align: center;
@@ -1524,9 +1529,9 @@ h2.lined-title {
 
 .prompt-popup p {
   position: relative;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font);
   font-size: clamp(20px, 2.2vw, 26px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.45;
   text-align: center;
 }
